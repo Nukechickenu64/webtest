@@ -480,14 +480,14 @@ var/list/allClothing = list()
 	for(var/mob/living/carbon/human/H in mob_list)
 		if(H.outsider == 0)
 			if(H.job == "Esculap")
-				H.combat_music = 'haruspex-combat.ogg'
+				H.combat_music = 'sound/music/haruspex-combat.ogg'
 				H.my_skills.ADD_SKILL(SKILL_MELEE, rand(3,5))
 				H.my_skills.ADD_SKILL(SKILL_RANGE, 3)
 				H.my_stats.st += 2
 				H.my_stats.dx += 3
 				H.my_stats.ht += 3
 			else
-				H << sound(pick('pathologic.ogg','haruspex.ogg'), repeat = 0, wait = 0, volume = H?.client?.prefs?.ambi_volume, channel = 12)
+				H << sound(pick('sound/music/pathologic.ogg','sound/music/haruspex.ogg'), repeat = 0, wait = 0, volume = H?.client?.prefs?.ambi_volume, channel = 12)
 				if(prob(75))
 					H.contract_disease(new /datum/disease/fluspanish,1,0)
 

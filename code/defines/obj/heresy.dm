@@ -198,7 +198,7 @@
 		src.sound2()
 		user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 		user.show_message("<span class='notice'>You hit the [src]!</span>", 1)
-		playsound(W.loc, pick('fence_hit1.ogg','fence_hit2.ogg','fence_hit3.ogg'), 25, 1, -1)
+		playsound(W.loc, pick('sound/effects/fence_hit1.ogg','sound/effects/fence_hit2.ogg','sound/effects/fence_hit3.ogg'), 25, 1, -1)
 		user.adjustStaminaLoss(rand(2,8))
 		animate(src, pixel_y=rand(-5,5), pixel_x=rand(-5,5), time = 1)
 		spawn(5)
@@ -210,7 +210,7 @@
 		return
 
 /obj/structure/lifeweb/statue/dummy/comicursed
-	icon = 'dummyBig.dmi'
+	icon = 'icons/dummyBig.dmi'
 	icon_state = ""
 
 /obj/machinery/chem_master/holy_altar/proc/darken()
@@ -314,7 +314,7 @@
 			src.visible_message("\red <B>Processing...</B>", 1)
 			if(S.taintedblood)
 				src.visible_message("\red <B>Tainted Blood detected!</B>", 1)
-				playsound(src.loc, 'thanati_key.ogg', 30, 0)
+				playsound(src.loc, 'sound/effects/thanati_key.ogg', 30, 0)
 				S.filledblood = FALSE
 				S.icon_state = "bsnatcher0"
 			else
